@@ -1,0 +1,138 @@
+.main {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 150px 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.main .button {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  color: rgb(255, 215, 0);
+  background-color: rgb(30, 30, 30);
+  min-width: 150px;
+  min-height: 50px;
+  border: 1px solid;
+  cursor: pointer;
+}
+.main .button:hover {
+  color: rgb(30, 30, 30);
+  background-color: rgb(255, 215, 0);
+  border-color: rgb(30, 30, 30);
+  transition: all 0.4s;
+}
+.main__top {
+  background-color: rgb(30, 30, 30);
+  padding: 10px;
+  grid-column: 1/3;
+}
+.main__header {
+  font-family: "Russo One", sans-serif;
+  font-weight: normal;
+  text-align: center;
+  color: rgb(255, 215, 0);
+}
+.main__subheader {
+  text-align: center;
+  font-family: "Russo One", sans-serif;
+  font-weight: normal;
+  color: rgb(255, 215, 0);
+}
+.main__options {
+  background-color: rgb(255, 215, 0);
+  padding-left: 20px;
+  border-right: 1px solid black;
+}
+.main__options__header {
+  margin-top: 10px;
+  font-family: "Russo One", sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+.main__button_add {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  color: rgb(255, 215, 0);
+  background-color: rgb(30, 30, 30);
+  min-width: 150px;
+  min-height: 50px;
+  border: rgb(255, 215, 0) 2px solid;
+  cursor: pointer;
+}
+.main__button_add:hover {
+  color: rgb(30, 30, 30);
+  background-color: rgb(255, 215, 0);
+  border-color: rgb(30, 30, 30);
+  transition: all 0.4s;
+}
+.main__button_add__list {
+  position: relative;
+  background-color: rgb(255, 215, 0);
+  max-width: 350px;
+}
+.main__button_add__list ul {
+  width: 100%;
+  padding: 0;
+  color: rgb(255, 215, 0);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 50px 50px;
+  gap: 15px;
+  align-items: center;
+  justify-items: center;
+}
+.main__button_add__list li {
+  width: 100%;
+  height: 100%;
+  font-family: "Oswald", sans-serif;
+  list-style-type: none;
+  font-size: 18px;
+}
+.main__button_add__list li .button {
+  width: 100%;
+}
+.main__button_add__list li .button:hover {
+  color: rgb(30, 30, 30);
+  background-color: rgb(255, 215, 0);
+  border: 1px solid rgb(30, 30, 30);
+  transition: all 0.4s;
+}
+.main__button_add__list .li_last {
+  grid-column: 1/3;
+}
+.main__button_add__list__close {
+  right: -5px;
+  top: 10px;
+  position: absolute;
+  cursor: pointer;
+}
+.main__button_add__list__close span {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: rgb(30, 30, 30);
+  transform: rotate(45deg);
+}
+.main__button_add__list__close span:last-of-type {
+  top: 0px;
+  transform: rotate(-45deg);
+}
+.main__workspace {
+  background-color: orange;
+  border-left: 1px solid black;
+}
+.main__workspace__header {
+  margin-top: 10px;
+  font-family: "Russo One", sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
