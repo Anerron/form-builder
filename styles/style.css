@@ -5,12 +5,13 @@
   grid-template-columns: 1fr 1fr;
 }
 .main .button {
+  box-sizing: border-box;
   font-family: "Oswald", sans-serif;
   font-size: 18px;
   color: rgb(255, 215, 0);
   background-color: rgb(30, 30, 30);
-  min-width: 150px;
-  min-height: 50px;
+  width: 150px;
+  height: 50px;
   border: 1px solid;
   cursor: pointer;
 }
@@ -19,6 +20,31 @@
   background-color: rgb(255, 215, 0);
   border-color: rgb(30, 30, 30);
   transition: all 0.4s;
+}
+.main .field {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  color: rgb(255, 215, 0);
+  background-color: rgb(30, 30, 30);
+  width: 300px;
+  height: 100%;
+  border: 1px solid;
+}
+.main .trashbox {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  border-radius: 100%;
+  background-color: rgb(30, 30, 30);
+  cursor: pointer;
 }
 .main__top {
   background-color: rgb(30, 30, 30);
@@ -49,6 +75,8 @@
   text-align: center;
 }
 .main__button_add {
+  margin-top: 20px;
+  display: block;
   font-family: "Oswald", sans-serif;
   font-size: 18px;
   color: rgb(255, 215, 0);
@@ -118,7 +146,28 @@
   top: 0px;
   transform: rotate(-45deg);
 }
+.main__button_generate {
+  margin-top: 10px;
+  padding-top: 8px;
+  display: inline-block;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  color: rgb(255, 215, 0);
+  background-color: rgb(30, 30, 30);
+  max-width: 150px;
+  max-height: 50px;
+  border: rgb(255, 215, 0) 2px solid;
+  cursor: pointer;
+}
 .main__workspace {
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px;
+  grid-auto-rows: minmax(50px, 75px);
+  row-gap: 15px;
+  justify-items: center;
   background-color: orange;
   border-left: 1px solid black;
 }
