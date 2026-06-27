@@ -5,13 +5,15 @@
   grid-template-columns: 1fr 1fr;
 }
 .main .button {
+  padding: 0px 5px 0px 5px;
   box-sizing: border-box;
   font-family: "Oswald", sans-serif;
   font-size: 18px;
   color: rgb(255, 215, 0);
   background-color: rgb(30, 30, 30);
-  width: 150px;
+  min-width: 200px;
   height: 50px;
+  white-space: nowrap;
   border: 1px solid;
   cursor: pointer;
 }
@@ -22,6 +24,7 @@
   transition: all 0.4s;
 }
 .main .field {
+  padding: 5px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -34,6 +37,18 @@
   width: 300px;
   height: 100%;
   border: 1px solid;
+}
+.main .field__type {
+  font-family: "Russo One", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: rgb(30, 30, 30);
+  position: absolute;
+  left: -100px;
+}
+.main .field__lable {
+  overflow: hidden;
+  white-space: nowrap;
 }
 .main .trashbox {
   width: 30px;
@@ -81,8 +96,6 @@
   font-size: 18px;
   color: rgb(255, 215, 0);
   background-color: rgb(30, 30, 30);
-  min-width: 150px;
-  min-height: 50px;
   border: rgb(255, 215, 0) 2px solid;
   cursor: pointer;
 }
@@ -149,14 +162,12 @@
 .main__button_generate {
   margin-top: 10px;
   padding-top: 8px;
-  display: inline-block;
+  display: block;
   font-family: "Oswald", sans-serif;
   font-size: 18px;
   text-align: center;
   color: rgb(255, 215, 0);
   background-color: rgb(30, 30, 30);
-  max-width: 150px;
-  max-height: 50px;
   border: rgb(255, 215, 0) 2px solid;
   cursor: pointer;
 }
