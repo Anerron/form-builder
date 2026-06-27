@@ -51,18 +51,18 @@ export class Field {
         fieldTrashbox.append(fieldTrashboxImg);
     }
 
-    renderInput(type) {
+    renderInput() {
         const input = document.createElement('input');
 
-        if (type.cssContext === 'Текст') {
+        if (this.#type.cssContext === 'Текст') {
             input.type = 'text';
-        } else if (type.cssContext === 'Почта') {
+        } else if (this.#type.cssContext === 'Почта') {
             input.type = 'email';
-        } else if (type.cssContext === 'Телефон') {
+        } else if (this.#type.cssContext === 'Телефон') {
             input.type = 'tel';
-        } else if (type.cssContext === 'Число') {
+        } else if (this.#type.cssContext === 'Число') {
             input.type = 'number';
-        } else if (type.cssContext === 'Пароль') {
+        } else if (this.#type.cssContext === 'Пароль') {
             input.type = 'password';
         }
     }

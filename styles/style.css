@@ -49,6 +49,7 @@
 .main .field__lable {
   overflow: hidden;
   white-space: nowrap;
+  color: orange;
 }
 .main .trashbox {
   width: 30px;

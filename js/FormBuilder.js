@@ -1,0 +1,33 @@
+import { Field } from './Field.js';
+
+export class FormBuilder {
+    #fields = [];
+
+    addField(type, label) {
+        const field = new Field(type, label);
+        this.#fields.push(field);
+        
+        return field;
+    }
+
+    removeField(id) {
+        this.#fields = this.#fields.filter(f => f.id !== id);
+    }
+
+    get fields() {
+        return this.#fields;
+    }
+
+    generateForm(container) {
+        container.innerHTML = '';
+
+        const form = document.createElement('form');
+
+        this.#fields.forEach((field) => {
+            const input = field.renderInput();
+            form.append(input);
+        });
+
+        
+    }
+}
