@@ -26,7 +26,7 @@ export class Field {
     }
 
     renderField() {
-        const workspace = document.querySelector('.main__workspace'),
+        const workspace = document.querySelector('.main__workspace__wrapper'),
               field = document.createElement('div'),
               fieldType = document.createElement('div'),
               fieldLable = document.createElement('div'),
@@ -49,21 +49,32 @@ export class Field {
 
         fieldTrashboxImg.src = './imgs/icons8-trash.svg';
         fieldTrashbox.append(fieldTrashboxImg);
+        field.append(fieldTrashbox);
     }
 
     renderInput() {
         const input = document.createElement('input');
 
-        if (this.#type.cssContext === 'Текст') {
+        if (this.#type === 'Текст') {
             input.type = 'text';
-        } else if (this.#type.cssContext === 'Почта') {
+            input.name = 'text';
+            input.placeholder = 'Введите ваш текст';
+        } else if (this.#type === 'Почта') {
             input.type = 'email';
-        } else if (this.#type.cssContext === 'Телефон') {
+            input.name = 'mail';
+            input.placeholder = 'Введите вашу почту';
+        } else if (this.#type === 'Телефон') {
             input.type = 'tel';
-        } else if (this.#type.cssContext === 'Число') {
+            input.name = 'telephone';
+            input.placeholder = 'Введите ваш номер телефона';
+        } else if (this.#type === 'Число') {
             input.type = 'number';
-        } else if (this.#type.cssContext === 'Пароль') {
+            input.name = 'numer';
+            input.placeholder = 'Введите ваше число';
+        } else if (this.#type === 'Пароль') {
             input.type = 'password';
+            input.name = 'password';
+            input.placeholder = 'Введите ваш пароль';
         }
     }
 }

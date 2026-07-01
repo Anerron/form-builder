@@ -19,15 +19,20 @@ export class FormBuilder {
     }
 
     generateForm(container) {
-        container.innerHTML = '';
+        const form = document.createElement('form'),
+              submit = document.createElement('button');
 
-        const form = document.createElement('form');
+        container.innerHTML = '';
 
         this.#fields.forEach((field) => {
             const input = field.renderInput();
             form.append(input);
         });
 
-        
+        submit.classList.add('button');
+        submit.textContent = 'Подтвердить данные';
+
+        form.append(submit);
+        container.append(form);
     }
 }

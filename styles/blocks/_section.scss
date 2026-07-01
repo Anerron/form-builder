@@ -33,7 +33,7 @@
         box-sizing: border-box;
         font-family: $secondary-font;
         font-size: 18px;
-        color: $yellow;
+        color: orange;
         background-color: $black;
         width: 300px;
         height: 100%;
@@ -102,7 +102,7 @@
     }
 
     &__button_add {
-        margin-top: 20px;
+        margin-top: 40px;
         display: block;
         font-family: $secondary-font;
         font-size: 18px;
@@ -120,7 +120,7 @@
         &__list {
             position: relative;
             background-color: $yellow;
-            max-width: 350px;
+            max-width: fit-content;
             ul {
                 width: 100%;
                 padding: 0;
@@ -194,10 +194,6 @@
     //Стили области "Рабочая область"
     &__workspace {
         padding-bottom: 20px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 50px;
-        grid-auto-rows: minmax(50px, 75px);
         row-gap: 15px;
         justify-items: center;
         background-color: orange;
@@ -208,6 +204,16 @@
             font-family: $main-font;
             font-size: 24px;
             text-align: center;
+        }
+
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 50px;
+            grid-auto-rows: 50px;
+            row-gap: 15px;
+            justify-items: center;
+            align-content: center;
         }
     }
 }

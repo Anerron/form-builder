@@ -32,7 +32,7 @@
   box-sizing: border-box;
   font-family: "Oswald", sans-serif;
   font-size: 18px;
-  color: rgb(255, 215, 0);
+  color: orange;
   background-color: rgb(30, 30, 30);
   width: 300px;
   height: 100%;
@@ -91,7 +91,7 @@
   text-align: center;
 }
 .main__button_add {
-  margin-top: 20px;
+  margin-top: 40px;
   display: block;
   font-family: "Oswald", sans-serif;
   font-size: 18px;
@@ -109,7 +109,8 @@
 .main__button_add__list {
   position: relative;
   background-color: rgb(255, 215, 0);
-  max-width: 350px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 .main__button_add__list ul {
   width: 100%;
@@ -174,10 +175,6 @@
 }
 .main__workspace {
   padding-bottom: 20px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 50px;
-  grid-auto-rows: minmax(50px, 75px);
   row-gap: 15px;
   justify-items: center;
   background-color: orange;
@@ -188,6 +185,15 @@
   font-family: "Russo One", sans-serif;
   font-size: 24px;
   text-align: center;
+}
+.main__workspace__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px;
+  grid-auto-rows: 50px;
+  row-gap: 15px;
+  justify-items: center;
+  align-content: center;
 }
 
 body {
